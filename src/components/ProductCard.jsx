@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './productcard.module.css';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../redux/action';
 
@@ -18,7 +19,7 @@ const Productcard = ({ price, image }) => {
                     <h1>${price}</h1>
                 </div>
                 <div className={styles.qty}>
-                    <AddIcon onClick={() => dispatch(decrement())} style={{ fontSize: 50 }} />
+                    <RemoveIcon onClick={() => dispatch(decrement())} style={{ fontSize: 50 }} />
                     <h2>{count}</h2>
                     <AddIcon onClick={() => dispatch(increment())} style={{ fontSize: 50 }} />
                 </div>
