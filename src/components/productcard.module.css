@@ -1,0 +1,28 @@
+.card{
+    height: 200px;
+    width: 350px;
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.card>div{
+    height: 100%;
+    width: 50%;
+}
+.qty{
+    display: flex;
+    align-items: center;
+}
+.description>div{
+height: 40%;
+width: 100%;
+}
+.description>div:nth-child(1){
+    height: 20%;
+}
+.circle{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
