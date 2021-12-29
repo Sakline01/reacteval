@@ -3,11 +3,13 @@ import styles from './productcard.module.css';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { increment, decrement } from '../redux/action';
+import { useState } from 'react';
 
 const Productcard = ({ price, image }) => {
-    const count = useSelector((state) => state.Count)
+    const [qty, setQty] = useState(0);
+
     const dispatch = useDispatch();
     return (
         <div className={styles.card}>
@@ -19,9 +21,9 @@ const Productcard = ({ price, image }) => {
                     <h1>${price}</h1>
                 </div>
                 <div className={styles.qty}>
-                    <RemoveIcon onClick={() => dispatch(decrement())} style={{ fontSize: 50 }} />
-                    <h2>{count}</h2>
-                    <AddIcon onClick={() => dispatch(increment())} style={{ fontSize: 50 }} />
+                    <RemoveIcon onClick={() => { dispatch(decrement()); setQty(qty - 1) }} style={{ fontSize: 50 }} />
+                    <h2>{qty}</h2>
+                    <AddIcon onClick={() => { dispatch(increment()); setQty(qty + 1) }} style={{ fontSize: 50 }} />
                 </div>
                 <div>
                     <Button variant="outlined" color="primary" >

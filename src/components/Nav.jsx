@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ButtonAppBar() {
+    const count = useSelector((state) => state.Count)
     const classes = useStyles();
 
     return (
@@ -33,7 +35,7 @@ export default function ButtonAppBar() {
                     <Typography variant="h6" className={classes.title}>
                         Home
                     </Typography>
-                    <Button color="inherit">Cart<ShoppingCartOutlinedIcon /></Button>
+                    <Button color="inherit">{count}<ShoppingCartOutlinedIcon /></Button>
                 </Toolbar>
             </AppBar>
         </div>
