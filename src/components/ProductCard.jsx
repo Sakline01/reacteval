@@ -27,7 +27,7 @@ const Productcard = ({ price, image }) => {
                 </div>
                 <div>
                     <Button variant="outlined" color="primary" >
-                        Primary
+                        Buy
                     </Button>
                 </div>
             </div>
