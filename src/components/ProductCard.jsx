@@ -3,7 +3,7 @@ import styles from './productcard.module.css';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 
-const Productcard = () => {
+const Productcard = ({ name, price }) => {
     return (
         <div className={styles.card}>
             <div>
@@ -11,7 +11,7 @@ const Productcard = () => {
             </div>
             <div className={styles.description}>
                 <div>
-                    <h1>$365</h1>
+                    <h1>${price}</h1>
                 </div>
                 <div className={styles.qty}>
                     <AddIcon style={{ fontSize: 50 }} />
