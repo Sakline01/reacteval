@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Checkoutcard = () => {
+const Cart = () => {
     return (
         <div>
             <h1>Cart page</h1>
@@ -8,4 +8,4 @@ const Checkoutcard = () => {
     );
 }
 
-export default Checkoutcard;
+export default Cart;

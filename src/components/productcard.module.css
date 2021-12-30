@@ -16,10 +16,14 @@
 .qty{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .description>div{
 height: 40%;
 width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .description>div:nth-child(1){
     height: 20%;

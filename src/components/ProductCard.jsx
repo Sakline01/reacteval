@@ -11,6 +11,7 @@ const Productcard = ({ price, image }) => {
     const [qty, setQty] = useState(0);
 
     const dispatch = useDispatch();
+    console.log(qty);
     return (
         <div className={styles.card}>
             <div>
@@ -21,11 +22,11 @@ const Productcard = ({ price, image }) => {
                     <h1>${price}</h1>
                 </div>
                 <div className={styles.qty}>
-                    <RemoveIcon onClick={() => { dispatch(decrement()); setQty(qty - 1) }} style={{ fontSize: 50 }} />
+                    <RemoveIcon onClick={qty > 0 ? () => { dispatch(decrement()); setQty(qty - 1) } : null} style={{ fontSize: 50 }} />
                     <h2>{qty}</h2>
                     <AddIcon onClick={() => { dispatch(increment()); setQty(qty + 1) }} style={{ fontSize: 50 }} />
                 </div>
-                <div>
+                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center' }}>
                     <Button variant="outlined" color="primary" >
                         Buy
                     </Button>
