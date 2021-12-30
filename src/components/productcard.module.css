@@ -1,6 +1,7 @@
 .card{
     height: 200px;
-    width: 350px;
+    width: 20%;
+    min-width: 350px;
     border: black solid 2px;
     display: flex;
     align-items: center;

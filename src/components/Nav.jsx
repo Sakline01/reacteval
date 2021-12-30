@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        position: 'sticky',
+        top: '0'
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -27,7 +29,9 @@ export default function ButtonAppBar() {
     const classes = useStyles();
     const styles = {
         color: "white",
-        textDecoration: "none"
+        textDecoration: "none",
+        height: "100%",
+        width: "100%"
     }
     return (
         <div className={classes.root}>
