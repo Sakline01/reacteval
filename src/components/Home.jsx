@@ -16,7 +16,7 @@ const Home = () => {
         <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-around', flexWrap: 'wrap', rowGap: '15px' }}>
             {
                 product.map(item => (
-                    <Productcard key={item.id} image={item.image} name={item.name} price={item.price} />
+                    <Productcard key={item.id} id={item.id} image={item.image} name={item.name} price={item.price} />
                 ))
             }
         </div>
